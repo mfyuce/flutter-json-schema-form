@@ -31,7 +31,7 @@ class Schema {
     List<Properties> props = List<Properties>();
     json.forEach((key, data) {
       bool required = true;
-      if (requiredList.indexOf(key) == -1) {
+      if (requiredList!=null && requiredList.indexOf(key) == -1) {
         required = false;
       }
       props.add(
